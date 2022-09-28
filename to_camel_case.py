@@ -12,7 +12,7 @@ def to_camel_case(text):
     s = s.split()
     if len(text) == 0:
         return text
-    return s[0] + ''.join(i.capitalize() for i in s[1:])
+    return print(s[0] + ''.join(i.capitalize() for i in s[1:]))
 
 
 to_camel_case('the_stealth_warrior')

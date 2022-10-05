@@ -11,7 +11,7 @@ def solution(number):
     for i in range(number):
         if (i % 3 == 0) or (i % 5 == 0):
             summation += i
-    return summation
+    return summationl
 
 
 print(solution(20))

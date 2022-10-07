@@ -20,9 +20,8 @@
 #
 # NOTE 2: The 0x0 (empty matrix) is represented as en empty array inside an array [[]].
 
-result = []
-
-def snail(snail_map):
+def snail(snail_map, x):
+    result = x
 
     temp = snail_map.copy()
 
@@ -49,8 +48,8 @@ def snail(snail_map):
             temp.remove(values)
 
     if temp:
-        return snail(temp)
-        # If i use return snail(temp, result) and def snail(snail_map,[])then works but not allowed
+        return snail(temp, result)
+        # If i use return snail(temp, result) and def snail(snail_map,x)then works but not allowed
 
     return result
 
@@ -65,5 +64,5 @@ array2 = [[1,2,3],
          [8,9,4],
          [7,6,5]]
 
-print(snail(array2))
-print(snail(snail_map))
+print(snail(array2,[]))
+print(snail(snail_map,[]))
